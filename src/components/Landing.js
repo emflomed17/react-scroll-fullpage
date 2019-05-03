@@ -7,7 +7,6 @@ import React, { Component } from "react";
 
 export default class Landing extends Component {
   render() {
-    console.log(this.props);
     const fullpageOptions = {
       anchors: ["firstPage", "secondPage", "thirdPage"],
       sectionsColor: ["#e7ea10", "#ff5f45", "#0798ec"],
@@ -21,8 +20,8 @@ export default class Landing extends Component {
         render={({ state, fullpageApi }) => {
           return (
             <div id="fullpage-wrapper">
-              <SectionOne />
-              <SectionTwo fullpageApi={fullpageApi} />
+              <SectionOne id="1" />
+              <SectionTwo api={fullpageApi} />
               <SectionThree />
             </div>
           );
